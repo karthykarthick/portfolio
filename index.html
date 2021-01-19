@@ -1,456 +1,1240 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<title>My Portfolio</title>
+	<title>Alexandre Bouhid's Portifolio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="scss/style.scss" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link rel="stylesheet" type="text/css" href="superslides.css">
-	<link rel="stylesheet" type="text/css" href="owl.carousel.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"
-		integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
-
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" href="" />
 
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+	<link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet">
+	<!--load all styles -->
+
+	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<link rel="stylesheet" href="css/aos.css">
+
+	<link rel="stylesheet" href="css/ionicons.min.css">
+	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="css/flaticon.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
-	<div class="loader">
-		<div class="inner"></div>
-	</div>
 
-	<div id="slides">
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+		<div class="container">
+			<!-- <a class="navbar-brand" href="index.html"><span>A</span>lexandre Bouhid</a>
+			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+				data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button> -->
 
-		<div class="overlay"></div>
+			<div class="collapse navbar-collapse justify-content-between" id="ftco-nav">
+				<ul class="navbar-nav nav ">
 
-		<div class="slides-container">
-			<img src="slide1.jpg" alt="">
-			<img src="slide2.jpeg" alt="">
-			<img src="slide3.jpeg" alt="">
-		</div>
+					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+					<li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
 
-		<div class="titleMessage">
-			<div class="heading">
-				<p class="main">Karthick</p>
-				<p class="sub typed"></p>
+					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+					<!-- <li class="nav-item"><a href="#services-section" class="nav-link"><span>Services</span></a></li> -->
+					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+
+				</ul>
+				<ul class="navbar-nav  ">
+
+					<li class="nav-item "><a href="https://github.com/abouhid/" target="_blank"
+							rel="noopener noreferrer" class="nav-link "><span class="heading">
+								<svg style="    width: 19px;
+						margin-bottom: 4px;
+						margin-right: 4px;" viewBox="0 0 128 128">
+									<g fill="#181616">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z">
+										</path>
+										<path
+											d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-	.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm-.743-.55M28.93 94.535c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zm-.575-.618M31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm0 0M34.573 101.373c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm0 0M39.073 103.324c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm0 0M44.016 103.685c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm0 0M48.614 102.903c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0">
+										</path>
+									</g>
+								</svg>
+								GitHub</span></a></li>
+
+					<li class="nav-item navbar-right"><a href="https://www.linkedin.com/in/alexandrebouhid"
+							target="_blank" rel="noopener noreferrer" class="nav-link"><span>
+								<i class="devicon-linkedin-plain"></i>LinkedIn</span></a></li>
+					<li class="nav-item navbar-right"><a href="https://angel.co/u/abouhid" target="_blank"
+							rel="noopener noreferrer" class="nav-link"><span>AngelList</span></a></li>
+
+				</ul>
 			</div>
 		</div>
-
-
-		<nav class="slides-navigation">
-			<a href="#" class="next"></a>
-			<a href="#" class="prev"></a>
-		</nav>
-
-
-	</div>
-
-
-	<nav id="navigation" class="navbar navbar-expand-lg">
-		<a class="navbar-brand" href="index.html">Karthick</a>
-
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-			aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-
-		<div class="collapse navbar-collapse" id="navbarNav">
-			<ul class="navbar-nav">
-				<li class="nav-item active">
-					<a class="nav-link" href="#about">About <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#skills">Skills</a>
-				</li>
-			
-				<li class="nav-item">
-					<a class="nav-link" href="#contact">Contact</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#portfolio">Portfolio</a>
-				</li>
-			</ul>
-		</div>
-
 	</nav>
-
-
-
-
-	<div id="about" class="section">
-
+	<section class="hero-wrap js-fullheight">
+		<div class="overlay"></div>
 		<div class="container">
-
-			<div class="row">
-
-				<div class="col-md-5">
-					<img class="aboutImage" src="pro-pic.jpg">
+			<div class="row no-gutters slider-text js-fullheight justify-content-between ">
+				<div class="col-md-6 col-sm-12  ftco-animate d-flex align-items-center">
+					<div class="text text-center">
+						<span class="subheading">Hello, World! I am</span>
+						<h1>Alexandre Bouhid</h1>
+						<h2>
+							<span class="txt-rotate" data-period="100"
+								data-rotate='[ "Developer.", "Engineer.", "Musician." ]'></span>
+						</h2>
+					</div>
 				</div>
-
-				<div class="col-md-7">
-
-
-					<h4>My name is Karthick</h4>
-
-					<p>Dear Viewers,
-						<br>
-						<p>
-							At the end of my UG degree, I realized that I didn't learn anything. It is a complete waste
-							of
-							time and money. Ya, it is
-							my fault and I took a decision on my life.
-							It took me 1 week to choose the technologies to learn and get the job and I choose the
-							technologies so then what let's
-							start the learning process.</p>
-						<p>
-							I did not do that. I start gathering the right resources to learn the current technologies
-							and it took another 1 week
-							and I schedule the plan like one step at a time it is step by step process. It takes a long
-							time and I know it is worth,
-							and it takes another 1 weeks. The schedule takes 3-6 months to complete. in the span of 3-6
-							months, I experienced fun,
-							anger, joy, excitement and patience. I realized that the schedule works that results in
-							projects</p>
-
-
+				<div class="col-md-6 col-sm-12  ftco-animate d-flex align-items-center">
+					<div class="text text-center">
+						<p class="text-center">Welcome to my personal portifolio! <br>Here you can find
+							some info about my skills, previous projects and experiences. Feel free to contact me for
+							web development solutions!
+						</p>
+						<a href="#contact-section" class="subheading "><span>Contact</span></a>
+						<!-- <span class="subheading text-right">- </span> -->
+					</div>
 				</div>
-
 			</div>
-
 		</div>
-
-	</div>
-
-
-
-	<div id="skills" class="skillsSection section">
-
-		<div class="container">
-
-			<div class="row">
-
-				<div class="col-md-12 text-center">
-					<h2>TECHNICAL SKILLS</h2>
-					<p>My proficiency in each skill (drag to scroll)</p>
-				</div>
-
-
-				<div class="owl-carousel owl-theme">
-
-					<div class="skill">
-						<span class="chart" data-percent="70">
-							<span class="percent">70</span>
-							<canvas height="152" width="152"></canvas>
-						</span>
-						<h4>PYTHON</h4>
-						<p>Used in most of my projects</p>
-					</div>
-
-					<div class="skill">
-						<span class="chart" data-percent="75">
-							<span class="percent">75</span>
-							<canvas height="152" width="152"></canvas>
-						</span>
-						<h4>Html</h4>
-						<p>Used for my Portfolio</p>
-					</div>
-
-					<div class="skill">
-						<span class="chart" data-percent="50">
-							<span class="percent">50</span>
-							<canvas height="152" width="152"></canvas>
-						</span>
-						<h4>Css</h4>
-						<p>Used for my Portfolio</p>
-					</div>
-
-
-					<div class="skill">
-						<span class="chart" data-percent="25">
-							<span class="percent">25</span>
-							<canvas height="152" width="152"></canvas>
-						</span>
-						<h4>javascript</h4>
-						<p>A new skill I am Learning</p>
-					</div>
-
-
-
-					
-
-				</div>
-
-
-
-			</div>
-
 		</div>
-
-	</div>
-
-
-
-	<div id="stats" class="statsSection section">
-
-		<div class="container">
-
-			<div class="row">
-
-
-				<div class="col-md-12 col-sm-12">
-
-					<div class="squareContent">
-						<h2 class="counter"></h2>
-						<center>
-							<h2>"The more I learn, the more I realize how much I don't know." - Albert Einstein</h2>
-					</div>
-					</center>
-
-
+		<!-- <div class="mouse">
+			<a href="#" class="mouse-icon">
+				<div class="mouse-wheel"><span class="ion-ios-arrow-round-down"></span></div>
+			</a>
+		</div> -->
+	</section>
+	<section class="ftco-section ftco-project" id="projects-section">
+		<div class="container-fluid px-md-0">
+			<div class="row no-gutters justify-content-center pb-5">
+				<div class="col-md-12 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Projects</h1>
+					<h2 class="mb-4">My Projects</h2>
+					<p>Here you can find some of my previous projects:</p>
 				</div>
 			</div>
 
+			<div class="row no-gutters">
+				<div class="col-md-6">
+					<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="
+					background-image: url(https://raw.githubusercontent.com/abouhid/Jazzix/development/src/images/screenshot.png);
+					background-position: top;
+					background-repeat: no-repeat;
+					background-size: cover;">
+						<div class="overlay"></div>
+						<div class="text text-center p-4">
+							<h3><a target="_blank" rel="noopener noreferrer" href="https://jazzix.netlify.app/">Jazzix -
+									React</a></h3>
+							<span>Instruments Web Store developed with React JS</span>
+							</br> <a target="_blank" rel="noopener noreferrer" style="color:white;"
+								href="https://github.com/abouhid/Jazzix">
+								<svg style="    width: 19px;margin-bottom: 4px;margin-right: 4px;"
+									viewBox="0 0 128 128">
+									<g fill="#181616">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z">
+										</path>
+										<path
+											d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm-.743-.55M28.93 94.535c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zm-.575-.618M31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm0 0M34.573 101.373c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm0 0M39.073 103.324c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm0 0M44.016 103.685c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm0 0M48.614 102.903c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0">
+										</path>
+									</g>
+								</svg>Github Repo</a></br>
+							<a target="_blank" rel="noopener noreferrer" style="color:white;"
+								href="https://jazzix.netlify.app/">Live Demo</a>
+
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(https://raw.githubusercontent.com/abouhid/JS_Game/develop/src/assets/img1.png);background-position: 0%;
+					background-repeat: no-repeat;
+					background-size: cover;">
+						<div class="overlay"></div>
+						<div class="text text-center p-4">
+							<h3><a href="http://twelveismissing.herokuapp.com/" target="_blank"
+									rel="noopener noreferrer">Platform Game - JavaScript</a></h3>
+							<span><i class="devicon-github-plain colored"></i>
+								Game developed entirely using JavaScript. Uses Phaser 3 and Leaderboards' API.
+							</span></br>
+							<a style="color:white;" href="https://github.com/abouhid/js_game" target="_blank"
+								rel="noopener noreferrer"><svg
+									style="    width: 19px;margin-bottom: 4px;margin-right: 4px;" viewBox="0 0 128 128">
+									<g fill="#181616">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z">
+										</path>
+										<path
+											d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm-.743-.55M28.93 94.535c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zm-.575-.618M31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm0 0M34.573 101.373c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm0 0M39.073 103.324c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm0 0M44.016 103.685c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm0 0M48.614 102.903c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0">
+										</path>
+									</g>
+								</svg>Github Repo</a></br>
+							<a style="color:white;" target="_blank" rel="noopener noreferrer"
+								href="http://twelveismissing.herokuapp.com/">Live Demo</a>
+
+
+
+
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(https://raw.githubusercontent.com/abouhid/SpeedTypingGame/development/src/images/screenshot.png);background-position: 0%;
+					background-repeat: no-repeat;
+					background-size: cover;">
+						<div class="overlay"></div>
+						<div class="text text-center p-4">
+							<h3><a target="_blank" rel="noopener noreferrer"
+									href="https://speedtypealex.netlify.app/">SpeedTypingGame - React
+								</a></h3>
+							<span> Game developed using React JS</span>
+							</br> <a target="_blank" rel="noopener noreferrer" style="color:white;"
+								href="https://github.com/abouhid/SpeedTypingGame">
+								<svg style="    width: 19px;margin-bottom: 4px;margin-right: 4px;"
+									viewBox="0 0 128 128">
+									<g fill="#181616">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z">
+										</path>
+										<path
+											d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm-.743-.55M28.93 94.535c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zm-.575-.618M31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm0 0M34.573 101.373c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm0 0M39.073 103.324c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm0 0M44.016 103.685c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm0 0M48.614 102.903c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0">
+										</path>
+									</g>
+								</svg>Github Repo</a></br>
+							<a target="_blank" rel="noopener noreferrer" style="color:white;"
+								href="https://speedtypealex.netlify.app/">Live Demo</a>
+
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-md-6">
+					<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="
+					background-image: url(https://raw.githubusercontent.com/abouhid/ToDo_list/development/screenshot1.png);
+					background-position: top;
+					background-repeat: no-repeat;
+					background-size: cover;">
+						<div class="overlay"></div>
+						<div class="text text-center p-4">
+							<h3><a target="_blank" rel="noopener noreferrer"
+									href="https://todoalexazamat.netlify.app/">To-do List App - JavaScript</a></h3>
+							<span>A Javascript To-Do List app, which allows the user to create tasks with descriptions,
+								due dates and priorities.</span>
+							</br> <a target="_blank" rel="noopener noreferrer" style="color:white;"
+								href="https://github.com/abouhid/ToDo_list">
+								<svg style="    width: 19px;margin-bottom: 4px;margin-right: 4px;"
+									viewBox="0 0 128 128">
+									<g fill="#181616">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z">
+										</path>
+										<path
+											d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm-.743-.55M28.93 94.535c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zm-.575-.618M31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm0 0M34.573 101.373c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm0 0M39.073 103.324c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm0 0M44.016 103.685c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm0 0M48.614 102.903c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0">
+										</path>
+									</g>
+								</svg>Github Repo</a></br>
+							<a target="_blank" rel="noopener noreferrer" style="color:white;"
+								href="https://todoalexazamat.netlify.app/">Live Demo</a>
+
+
+
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(https://raw.githubusercontent.com/abouhid/Weather_app/development/screenshot1.png);background-position: 0%;
+					background-repeat: no-repeat;
+					background-size: cover;">
+						<div class="overlay"></div>
+						<div class="text text-center p-4">
+							<h3><a target="_blank" rel="noopener noreferrer"
+									href="https://rawcdn.githack.com/abouhid/Weather_app/a09e9398e3803c4434b3ef09017d075b2658885a/dist/index.html">Weather
+									App - JavaScript</a>
+							</h3>
+							<span>A Javascript app that allows the user to look for the weather conditions anywhere in
+								the world via OpenWeather's API and, depending on the weather, Spotify's API suggests a
+								better playlist for your mood.</span>
+							</br> <a target="_blank" rel="noopener noreferrer" style="color:white;"
+								href="https://github.com/abouhid/Weather_app">
+								<svg style="    width: 19px;margin-bottom: 4px;margin-right: 4px;"
+									viewBox="0 0 128 128">
+									<g fill="#181616">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z">
+										</path>
+										<path
+											d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm-.743-.55M28.93 94.535c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zm-.575-.618M31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm0 0M34.573 101.373c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm0 0M39.073 103.324c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm0 0M44.016 103.685c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm0 0M48.614 102.903c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0">
+										</path>
+									</g>
+								</svg>Github Repo</a></br>
+							<a target="_blank" rel="noopener noreferrer" style="color:white;"
+								href="https://rawcdn.githack.com/abouhid/Weather_app/a09e9398e3803c4434b3ef09017d075b2658885a/dist/index.html">Live
+								Demo</a>
+
+
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(https://raw.githubusercontent.com/abouhid/Twitter_redesign/development/main_page.png);background-position: 0%;
+					background-repeat: no-repeat;
+					background-size: cover;">
+						<div class="overlay"></div>
+						<div class="text text-center p-4">
+							<h3><a target="_blank" rel="noopener noreferrer"
+									href="https://github.com/abouhid/Twitter_redesign">Twitter Social Media App - Ruby
+									on Rails </a></h3>
+							<span>Ruby on Rails social media wher is possible to follow friends, add tweets and
+								likes</span>
+
+							</br> <a target="_blank" rel="noopener noreferrer" style="color:white;"
+								href="https://github.com/abouhid/Twitter_redesign">
+								<svg style="    width: 19px;margin-bottom: 4px;margin-right: 4px;"
+									viewBox="0 0 128 128">
+									<g fill="#181616">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z">
+										</path>
+										<path
+											d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm-.743-.55M28.93 94.535c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zm-.575-.618M31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm0 0M34.573 101.373c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm0 0M39.073 103.324c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm0 0M44.016 103.685c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm0 0M48.614 102.903c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0">
+										</path>
+									</g>
+								</svg>Github Repo</a></br>
+							<a target="_blank" rel="noopener noreferrer" style="color:white;"
+								href="https://twitterredesign.herokuapp.com/users/sign_in">Live Demo</a>
+
+
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(https://github.com/abouhid/private-events/raw/develop/Index.png);background-position: 0%;
+					background-repeat: no-repeat;
+					background-size: cover;">
+						<div class="overlay"></div>
+						<div class="text text-center p-4">
+							<h3><a target="_blank" rel="noopener noreferrer"
+									href="https://github.com/abouhid/private-events">Private Events App - Ruby on
+									Rails</a></h3>
+							<span>Ruby on Rails project which builds an application that permits users to create and
+								attend events if they are logged in.
+							</span>
+							</br> <a target="_blank" rel="noopener noreferrer" style="color:white;"
+								href="https://github.com/abouhid/private-events">
+								<svg style="    width: 19px;margin-bottom: 4px;margin-right: 4px;"
+									viewBox="0 0 128 128">
+									<g fill="#181616">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z">
+										</path>
+										<path
+											d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm-.743-.55M28.93 94.535c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zm-.575-.618M31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm0 0M34.573 101.373c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm0 0M39.073 103.324c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm0 0M44.016 103.685c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm0 0M48.614 102.903c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0">
+										</path>
+									</g>
+								</svg>Github Repo</a></br>
+
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-md-6">
+					<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(https://github.com/abouhid/Ruby-Capstone/raw/master/screenshot.png);
+					background-position: 0%;
+					background-repeat: no-repeat;
+					background-size: cover;">
+						<div class="overlay"></div>
+						<div class="text text-center p-4">
+							<h3><a target="_blank" rel="noopener noreferrer"
+									href="https://github.com/abouhid/Ruby-Capstone">Linters Logic - Ruby</a>
+							</h3>
+							<span>Ruby code that can find specific types of errors in .css files.</span>
+							</br> <a target="_blank" rel="noopener noreferrer" style="color:white;"
+								href="https://github.com/abouhid/Ruby-Capstone">
+								<svg style="    width: 19px;margin-bottom: 4px;margin-right: 4px;"
+									viewBox="0 0 128 128">
+									<g fill="#181616">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z">
+										</path>
+										<path
+											d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm-.743-.55M28.93 94.535c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zm-.575-.618M31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm0 0M34.573 101.373c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm0 0M39.073 103.324c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm0 0M44.016 103.685c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm0 0M48.614 102.903c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0">
+										</path>
+									</g>
+								</svg>Github Repo</a></br>
+
+						</div>
+					</div>
+				</div>
+
+
+
+
+				<!-- <div class="col-md-4">
+    				<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/work-6.jpg);">
+    					<div class="overlay"></div>
+	    				<div class="text text-center p-4">
+	    					<h3><a href="#">Branding &amp; Illustration Design</a></h3>
+	    					<span>Web Design</span>
+	    				</div>
+    				</div>
+    			</div> -->
+			</div>
 		</div>
-
-	</div>
-
-	<div id="contact" class="contactSection section">
-
-		<div class="col-md-12 text-center">
-
-			<p class="subHeading">Like what you see?</p>
-			<h2>I'd love to hear from you!</h2>
-			<a href="mailTo:connectokarthick@gmail.com" class="contactButton">GET IN TOUCH!</a>
-
-		</div>
-
-	</div>
-
-
-
-	<div id="portfolio" class="section">
-
+	</section>
+	<section class="ftco-about img ftco-section ftco-no-pt ftco-no-pb" id="about-section">
 		<div class="container">
+			<div class="row d-flex no-gutters">
+				<div class="col-md-6 col-lg-6 d-flex">
+					<div class="img-about img d-flex align-items-stretch">
+						<div class="overlay"></div>
+						<div class="img d-flex align-self-stretch align-items-center"
+							style="background-image:url(images/profile1.jpg);">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-6 pl-md-5 py-5">
+					<div class="row justify-content-start pb-3">
+						<div class="col-md-12 heading-section ftco-animate">
+							<h1 class="big">About</h1>
+							<h2 class="mb-4">About Me</h2>
+							<p>Engineer that fell in love with coding and wants to land a developer job in which I am
+								proud of who I'm working with and what I'm working for!</p>
+							<ul class="about-info px-md-0 px-2">
+								<li class="d-flex"><span>Name:</span> <span>Alexandre Bouhid</span></li>
+								<li class="d-flex"><span>Date of birth:</span> <span>August 26, 1995</span></li>
+								<li class="d-flex"><span>Address:</span> <span>Juiz de Fora - Brazil</span></li>
+								<li class="d-flex"><span>Zip code:</span> <span>36020030</span></li>
+								<li class="d-flex"><span>Email:</span> <span>alexandre.bouhid@gmail.com</span></li>
+								<li class="d-flex"><span>Phone: </span> <span>+55 32 99160 3200</span></li>
+							</ul>
+						</div>
+					</div>
 
+					<div class="counter-wrap ftco-animate d-flex ">
+						<div class="text">
+							<!-- <p class="mb-4">
+								<span class="number api-test" data-number="120">0</span>
+								<span>Project complete</span>											
+								</script>
+							</p> -->
+							<p><a target="_blank" rel="noopener noreferrer" href="CV_Alexandre_Bouhid.pdf"
+									class="btn btn-primary py-3 px-3">Download CV</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- <section class="ftco-section ftco-partner">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-sm ftco-animate">
+    				<a href="#" class="partner"><img src="images/partner-1.png" class="img-fluid" alt="Colorlib Template"></a>
+    			</div>
+    			<div class="col-sm ftco-animate">
+    				<a href="#" class="partner"><img src="images/partner-2.png" class="img-fluid" alt="Colorlib Template"></a>
+    			</div>
+    			<div class="col-sm ftco-animate">
+    				<a href="#" class="partner"><img src="images/partner-3.png" class="img-fluid" alt="Colorlib Template"></a>
+    			</div>
+    			<div class="col-sm ftco-animate">
+    				<a href="#" class="partner"><img src="images/partner-4.png" class="img-fluid" alt="Colorlib Template"></a>
+    			</div>
+    			<div class="col-sm ftco-animate">
+    				<a href="#" class="partner"><img src="images/partner-5.png" class="img-fluid" alt="Colorlib Template"></a>
+    			</div>
+    		</div>
+    	</div>
+    </section> -->
+
+	<section class="ftco-section ftco-no-pb goto-here" id="resume-section">
+		<div class="container">
 			<div class="row">
-
-				<div class="heading">
-					<h2>PORTFOLIO</h2>
+				<div class="col-md-3">
+					<nav id="navi">
+						<ul>
+							<li><a href="#page-1">Education</a></li>
+							<li><a href="#page-2">Experience</a></li>
+							<li><a href="#page-3">Skills</a></li>
+							<!-- <li><a href="#page-4">Awards</a></li> -->
+						</ul>
+					</nav>
 				</div>
+				<div class="col-md-9">
+					<div id="page-1" class="page one">
+						<h2 class="heading">Education</h2>
+						<div class="resume-wrap d-flex ftco-animate">
+							<div class="icon d-flex align-items-center justify-content-center">
+								<span class="flaticon-web-design"></span>
+							</div>
+							<div class="text pl-3">
+								<span class="date">2020</span>
+								<h2>Full-Stack Development Student in Microverse</h2>
+								<span class="position">Microverse Program</span>
+								<p>Working 40h a week Monday-Friday in a remote pair-programming setup with coding
+									partners.
+									Fundamentals of full-stack programming such as languages, frameworks, libraries, Git
+									Flow practices,
+									algorithms, data structures, SQL as well as debugging tools.</p>
+							</div>
+						</div>
 
-				<div class="filter">
 
-					<ul id="filters">
+						<div class="resume-wrap d-flex ftco-animate">
+							<div class="icon d-flex align-items-center justify-content-center">
+								<span class="flaticon-innovation"></span>
+							</div>
+							<div class="text pl-3">
+								<span class="date">2013-2020</span>
+								<h2>Mechanical Engineering Bachelor</h2>
+								<span class="position">Federal University of Juiz de Fora, Brazil</span>
+								<p>Bachelor's Degree in which I acquired knowledge on the principles
+									of engineering, developed quick logical thinking and was provided the opportunity to
+									write and present an article on a Computational Methods in Engineering Congress.</p>
+							</div>
+						</div>
+						<div class="resume-wrap d-flex ftco-animate">
+							<div class="icon d-flex align-items-center justify-content-center">
+								<span class="flaticon-idea"></span>
+							</div>
+							<div class="text pl-3">
+								<span class="date">2018-2019</span>
+								<h2>Exchange Program Student</h2>
+								<span class="position">Politechnika Wrocławska, Poland</span>
+								<p>Approved in a strict selection process which allowed me to study abroad and
+									learn more about multicultural environments and interact with people from all walks
+									of life.</p>
+							</div>
+						</div>
+					</div>
 
-						<li><a href="#" data-filter="*" class="current">ALL</a></li>
-						<!--<li><a href="#" data-filter=".apps">Machine Learning</a></li>-->
-						<li><a href="#" data-filter=".me">Python</a></li>
-						<li><a href="#" data-filter=".websites">Certification</a></li>
+					<div id="page-2" class="page two">
+						<h2 class="heading">Experience</h2>
 
-					</ul>
+						<div class="resume-wrap d-flex ftco-animate">
+							<div class="icon d-flex align-items-center justify-content-center">
+								<span class="flaticon-ideas"></span>
+							</div>
+							<div class="text pl-3">
+								<span class="date">2017-2018</span>
+								<h2>Mercedes-Benz Intern</h2>
+								<span class="position">Mercedes-Benz Ltda. , Brazil</span>
+								<p>Engineering internship in which I developed professional
+									skills in a real work environment and created IT solutions for daily problems.</p>
+							</div>
+						</div>
+						<!--	 <div class="resume-wrap d-flex ftco-animate">
+	    					<div class="icon d-flex align-items-center justify-content-center">
+					    		<span class="flaticon-ideas"></span>
+					    	</div>
+					    	<div class="text pl-3">
+		    					<span class="date">2014-2015</span>
+		    					<h2>Web Designer</h2>
+		    					<span class="position">Cambridge University</span>
+		    					<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+		    				</div>
+	    				</div>
+	    			</div>
+						<div class="resume-wrap d-flex ftco-animate">
+	    					<div class="icon d-flex align-items-center justify-content-center">
+					    		<span class="flaticon-ideas"></span>
+					    	</div>
+					    	<div class="text pl-3">
+		    					<span class="date">2014-2015</span>
+		    					<h2>Web Marketing</h2>
+		    					<span class="position">Cambridge University</span>
+		    					<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+		    				</div>
+						
+	    				<div class="resume-wrap d-flex ftco-animate">
+	    					<div class="icon d-flex align-items-center justify-content-center">
+					    		<span class="flaticon-ideas"></span>
+					    	</div>
+					    	<div class="text pl-3">
+		    					<span class="date">2014-2015</span>
+		    					<h2>Art &amp; Creative Director</h2>
+		    					<span class="position">Side Tech</span>
+		    					<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+		    				</div>
+	    				</div>
+	    				<div class="resume-wrap d-flex ftco-animate">
+	    					<div class="icon d-flex align-items-center justify-content-center">
+					    		<span class="flaticon-ideas"></span>
+					    	</div>
+					    	<div class="text pl-3">
+		    					<span class="date">2014-2015</span>
+		    					<h2>Wordpress Developer</h2>
+		    					<span class="position">Cambridge University</span>
+		    					<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+		    				</div>
+	    				</div>
+	    				<div class="resume-wrap d-flex ftco-animate">
+	    					<div class="icon d-flex align-items-center justify-content-center">
+					    		<span class="flaticon-ideas"></span>
+					    	</div>
+					    	<div class="text pl-3">
+		    					<span class="date">2017-2018</span>
+		    					<h2>UI/UX Designer</h2>
+		    					<span class="position">Cambridge University</span>
+		    					<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+		    				</div>
+	    				</div> -->
+					</div>
+					<div id="page-3" class="page three">
+						<h2 class="heading">Skills</h2>
+						<!-- <div class="row progress-circle mb-5">
+							<div class="col-lg-4 mb-4">
+								<div class="bg-white rounded-lg shadow p-4">
+									<h2 class="h5 font-weight-bold text-center mb-4">CSS</h2>
 
+								
+									<div class="progress mx-auto" data-value='90'>
+										<span class="progress-left">
+											<span class="progress-bar border-primary"></span>
+										</span>
+										<span class="progress-right">
+											<span class="progress-bar border-primary"></span>
+										</span>
+										<div
+											class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+											<div class="h2 font-weight-bold">90<sup class="small">%</sup></div>
+										</div>
+									</div>
+									
+
+								
+									<div class="row text-center mt-4">
+										<div class="col-6 border-right">
+											<div class="h4 font-weight-bold mb-0">28%</div><span
+												class="small text-gray">Last week</span>
+										</div>
+										<div class="col-6">
+											<div class="h4 font-weight-bold mb-0">60%</div><span
+												class="small text-gray">Last month</span>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+
+							<div class="col-lg-4 mb-4">
+								<div class="bg-white rounded-lg shadow p-4">
+									<h2 class="h5 font-weight-bold text-center mb-4">HTML</h2>
+
+								
+									<div class="progress mx-auto" data-value='80'>
+										<span class="progress-left">
+											<span class="progress-bar border-primary"></span>
+										</span>
+										<span class="progress-right">
+											<span class="progress-bar border-primary"></span>
+										</span>
+										<div
+											class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+											<div class="h2 font-weight-bold">80<sup class="small">%</sup></div>
+										</div>
+									</div>
+								
+									<div class="row text-center mt-4">
+										<div class="col-6 border-right">
+											<div class="h4 font-weight-bold mb-0">28%</div><span
+												class="small text-gray">Last week</span>
+										</div>
+										<div class="col-6">
+											<div class="h4 font-weight-bold mb-0">60%</div><span
+												class="small text-gray">Last month</span>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+
+							<div class="col-lg-4 mb-4">
+								<div class="bg-white rounded-lg shadow p-4">
+									<h2 class="h5 font-weight-bold text-center mb-4">jQuery</h2>
+
+									
+									<div class="progress mx-auto" data-value='75'>
+										<span class="progress-left">
+											<span class="progress-bar border-primary"></span>
+										</span>
+										<span class="progress-right">
+											<span class="progress-bar border-primary"></span>
+										</span>
+										<div
+											class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+											<div class="h2 font-weight-bold">75<sup class="small">%</sup></div>
+										</div>
+									</div>
+								
+									<div class="row text-center mt-4">
+										<div class="col-6 border-right">
+											<div class="h4 font-weight-bold mb-0">28%</div><span
+												class="small text-gray">Last week</span>
+										</div>
+										<div class="col-6">
+											<div class="h4 font-weight-bold mb-0">60%</div><span
+												class="small text-gray">Last month</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div> -->
+						<div class="row">
+							<div class="col-6 animate-box">
+								<div class="progress-wrap ftco-animate">
+									<h3><i class="devicon-react-original colored"></i>
+										React & Redux</h3>
+									<h3><i class="devicon-gatsby-plain"></i> Gatsby</h3>
+									<h3><i class="devicon-ruby-plain-wordmark colored"></i>
+										Ruby</h3>
+									<h3><i class="devicon-html5-plain colored"></i>
+										HTML/CSS</h3>
+
+									
+
+
+								</div>
+							</div>
+							<div class="col-6 animate-box">
+								<div class="progress-wrap ftco-animate">
+									<h3><i class="devicon-javascript-plain colored"></i>
+										JavaScript</h3>
+										<h3><i class="devicon-typescript-plain"></i>
+										TypeScript</h3>
+									<h3><i class="devicon-rails-plain colored"></i>
+										Ruby on Rails</h3>
+									<h3><i class="devicon-bootstrap-plain"></i>
+ 										Bootstrap</h3>
+
+								</div>
+							</div>
+						</div>
+						<!-- <div class="col-md-6 animate-box">
+								<div class="progress-wrap ftco-animate">
+									<h3>HTML5</h3>
+									<div class="progress">
+										<div class="progress-bar color-3" role="progressbar" aria-valuenow="95"
+											aria-valuemin="0" aria-valuemax="100" style="width:95%">
+											<span>95%</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 animate-box">
+								<div class="progress-wrap ftco-animate">
+									<h3>CSS3</h3>
+									<div class="progress">
+										<div class="progress-bar color-4" role="progressbar" aria-valuenow="90"
+											aria-valuemin="0" aria-valuemax="100" style="width:90%">
+											<span>90%</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 animate-box">
+								<div class="progress-wrap ftco-animate">
+									<h3>WordPress</h3>
+									<div class="progress">
+										<div class="progress-bar color-5" role="progressbar" aria-valuenow="70"
+											aria-valuemin="0" aria-valuemax="100" style="width:70%">
+											<span>70%</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 animate-box">
+								<div class="progress-wrap ftco-animate">
+									<h3>SEO</h3>
+									<div class="progress">
+										<div class="progress-bar color-6" role="progressbar" aria-valuenow="80"
+											aria-valuemin="0" aria-valuemax="100" style="width:80%">
+											<span>80%</span>
+										</div>
+									</div>
+								</div>
+							</div> -->
+					</div>
 				</div>
-
-
-				<div class="itemsContainer">
-
-					<ul class="items">
-
-
-
-
-
-						<li class="me col-xs-6 col-sm-4 col-md-3 col-lg-3">
-
-
-							<div class="item">
-
-								<img src="sm.png">
-
-
-								<div class="icons">
-									<a href="sm.png" title="View image" class="openButton" data-fancybox
-										data-caption="This is a strong password Genrator">
-										<i class="fa fa-search"></i>
-									</a>
-
-									<a href="https://github.com/karthy1998/Python-Password-Genrator" target="_blank"
-										class="projectLink">
-										<i class="fa fa-link"></i>
-									</a>
-								</div>
-
-								<div class="imageOverlay"></div>
-
+				<!-- <div id="page-4" class="page four">
+						<h2 class="heading">Awards</h2>
+						<div class="resume-wrap d-flex ftco-animate">
+							<div class="icon d-flex align-items-center justify-content-center">
+								<span class="flaticon-ideas"></span>
 							</div>
-
-
-						</li>
-
-						<li class="me col-xs-6 col-sm-4 col-md-3 col-lg-3">
-
-
-							<div class="item">
-
-								<img src="rps.png">
-
-
-								<div class="icons">
-									<a href="rps.png" title="View image" class="openButton" data-fancybox
-										data-caption="This is Rock paper scisscor game ">
-										<i class="fa fa-search"></i>
-									</a>
-
-									<a href="https://github.com/karthy1998/python-Rock-Paper-Scissors-game"
-										target="_blank" class="projectLink">
-										<i class="fa fa-link"></i>
-									</a>
-								</div>
-
-								<div class="imageOverlay"></div>
-
+							<div class="text pl-3">
+								<span class="date">2014-2015</span>
+								<h2>Top 10 Web Developer</h2>
+								<span class="position">Cambridge University</span>
+								<p>A small river named Duden flows by their place and supplies it with the necessary
+									regelialia. It is a paradisematic country, in which roasted parts of sentences fly
+									into your mouth.</p>
 							</div>
-
-
-						</li>
-
-						<li class="me col-xs-6 col-sm-4 col-md-3 col-lg-3">
-
-
-							<div class="item">
-
-								<img src="sec.jpg">
-
-
-								<div class="icons">
-									<a href="sec.jpg" title="View image" class="openButton" data-fancybox
-										data-caption="This is a secret message project">
-										<i class="fa fa-search"></i>
-									</a>
-
-									<a href="https://github.com/karthy1998/Secret-Messages" target="_blank"
-										class="projectLink">
-										<i class="fa fa-link"></i>
-									</a>
-								</div>
-
-								<div class="imageOverlay"></div>
-
+						</div>
+						<div class="resume-wrap d-flex ftco-animate">
+							<div class="icon d-flex align-items-center justify-content-center">
+								<span class="flaticon-ideas"></span>
 							</div>
-
-
-						</li>
-
-						<li class="me col-xs-6 col-sm-4 col-md-3 col-lg-3">
-
-
-							<div class="item">
-
-								<img src="ist.jpg">
-
-
-								<div class="icons">
-									<a href="ist.jpg" title="View image" class="openButton" data-fancybox
-										data-caption="This is used to track ISS ">
-										<i class="fa fa-search"></i>
-									</a>
-
-									<a href="https://github.com/karthy1998/iss-Tracker" target="_blank"
-										class="projectLink">
-										<i class="fa fa-link"></i>
-									</a>
-								</div>
-
-								<div class="imageOverlay"></div>
-
+							<div class="text pl-3">
+								<span class="date">2014-2015</span>
+								<h2>Top 5 LeaderShip Exellence Winner</h2>
+								<span class="position">Cambridge University</span>
+								<p>A small river named Duden flows by their place and supplies it with the necessary
+									regelialia. It is a paradisematic country, in which roasted parts of sentences fly
+									into your mouth.</p>
 							</div>
-
-
-						</li>
-
-
-
-						<li class="websites col-xs-6 col-sm-4 col-md-3 col-lg-3">
-
-
-							<div class="item">
-
-								<img src="certi.jpg">
-
-
-								<div class="icons">
-									<a href="certi.jpg" title="View image" class="openButton" data-fancybox
-										data-caption="This is a cute dog">
-										<i class="fa fa-search"></i>
-									</a>
-
-									<a href="https://udemy-certificate.s3.amazonaws.com/image/UC-KTBXFMAV.jpg"
-										target="_blank" class="projectLink">
-										<i class="fa fa-link"></i>
-									</a>
-								</div>
-
-								<div class="imageOverlay"></div>
-
+						</div>
+						<div class="resume-wrap d-flex ftco-animate">
+							<div class="icon d-flex align-items-center justify-content-center">
+								<span class="flaticon-ideas"></span>
 							</div>
+							<div class="text pl-3">
+								<span class="date">2014-2015</span>
+								<h2>Top 4 Web Tester</h2>
+								<span class="position">Cambridge University</span>
+								<p>A small river named Duden flows by their place and supplies it with the necessary
+									regelialia. It is a paradisematic country, in which roasted parts of sentences fly
+									into your mouth.</p>
+							</div>
+						</div>
+						<div class="resume-wrap d-flex ftco-animate">
+							<div class="icon d-flex align-items-center justify-content-center">
+								<span class="flaticon-ideas"></span>
+							</div>
+							<div class="text pl-3">
+								<span class="date">2014-2015</span>
+								<h2>Art &amp; Creative Director</h2>
+								<span class="position">Cambridge University</span>
+								<p>A small river named Duden flows by their place and supplies it with the necessary
+									regelialia. It is a paradisematic country, in which roasted parts of sentences fly
+									into your mouth.</p>
+							</div>
+						</div>
+					</div> -->
+			</div>
+		</div>
+		</div>
+	</section>
+	<!-- 
+    <section class="ftco-section" id="services-section">
+    	<div class="container-fluid px-md-5">
+    		<div class="row justify-content-center py-5 mt-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Services</h1>
+            <h2 class="mb-4">Services</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+          </div>
+        </div>
+    		<div class="row">
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<a href="#" class="services-1 shadow">
+							<span class="icon">
+								<i class="flaticon-analysis"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">Web Design</h3>
+								<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<a href="#" class="services-1 shadow">
+							<span class="icon">
+								<i class="flaticon-flasks"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">Phtography</h3>
+								<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<a href="#" class="services-1 shadow">
+							<span class="icon">
+								<i class="flaticon-ideas"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">Web Developer</h3>
+								<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+							</div>
+						</a>
+					</div>
 
-
-						</li>
-
-					</ul>
-
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<a href="#" class="services-1 shadow">
+							<span class="icon">
+								<i class="flaticon-innovation"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">App Developing</h3>
+								<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<a href="#" class="services-1 shadow">
+							<span class="icon">
+								<i class="flaticon-ux-design"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">Branding</h3>
+								<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-4 text-center d-flex ftco-animate">
+						<a href="#" class="services-1 shadow">
+							<span class="icon">
+								<i class="flaticon-idea"></i>
+							</span>
+							<div class="desc">
+								<h3 class="mb-5">Product Strategy</h3>
+								<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+							</div>
+						</a>
+					</div>
 				</div>
+    	</div>
+    </section> -->
 
 
 
 
+	<!-- <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+		<div class="container-fluid px-md-5">
+			<div class="row d-md-flex align-items-center">
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18 shadow">
+						<div class="text">
+							<strong class="number" data-number="100">0</strong>
+							<span>Awards</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18 shadow">
+						<div class="text">
+							<strong class="number" data-number="1200">0</strong>
+							<span>Complete Projects</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18 shadow">
+						<div class="text">
+							<strong class="number" data-number="1200">0</strong>
+							<span>Happy Customers</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18 shadow">
+						<div class="text">
+							<strong class="number" data-number="500">0</strong>
+							<span>Cups of coffee</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section> -->
 
 
+	<!-- <section class="ftco-section" id="blog-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Blog</h1>
+            <h2 class="mb-4">Our Blog</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+                <h3 class="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a></h3>
+                <div class="d-flex align-items-center mb-3 meta">
+	                <p class="mb-0">
+	                	<span class="mr-2">Sept. 12, 2019</span>
+	                	<a href="#" class="mr-2">Admin</a>
+	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+	                </p>
+                </div>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+                <h3 class="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a></h3>
+                <div class="d-flex align-items-center mb-3 meta">
+	                <p class="mb-0">
+	                	<span class="mr-2">Sept. 12, 2019</span>
+	                	<a href="#" class="mr-2">Admin</a>
+	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+	                </p>
+                </div>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+                <h3 class="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a></h3>
+                <div class="d-flex align-items-center mb-3 meta">
+	                <p class="mb-0">
+	                	<span class="mr-2">Sept. 12, 2019</span>
+	                	<a href="#" class="mr-2">Admin</a>
+	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+	                </p>
+                </div>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+	<section class="ftco-section ftco-hireme img" style="background-image: url(images/bg_1.jpg)">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>I'm <span>Available</span> for freelancing</h2>
+					<!-- <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+						<p class="mb-0"><a href="#" class="btn btn-primary py-3 px-5">Hire me</a></p>
+					</div> -->
+				</div>
+			</div>
+	</section>
+
+	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Contact</h1>
+					<h2 class="mb-4">Contact Me</h2>
+					<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p> -->
+				</div>
 			</div>
 
+			<div class="row d-flex contact-info mb-5">
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box text-center p-4 shadow">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-map-signs"></span>
+						</div>
+						<div>
+							<h3 class="mb-4">Address</h3>
+							<p>Juiz de Fora, MG, Brazil - 36020030</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box text-center p-4 shadow">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-phone2"></span>
+						</div>
+						<div>
+							<h3 class="mb-4">Contact Number</h3>
+							<p><a href="tel://1234567920">+55 32 99160 3200</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box text-center px-2 py-4 shadow">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-paper-plane"></span>
+						</div>
+						<div>
+							<h3 class="mb-4">Email Address</h3>
+							<p><a href="mailto:info@yoursite.com">alexandre.bouhid@gmail.com</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box text-center p-4 shadow">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-globe"></span>
+						</div>
+						<div>
+							<h3 class="mb-4">Github/LinkedIn</h3>
+
+							<p class="nav-item"><a href="https://github.com/abouhid/" target="_blank"
+									rel="noopener noreferrer" class="nav-link "><span class="heading">
+
+										<svg style="    width: 19px;
+										margin-bottom: 4px;
+										margin-right: 4px;" viewBox="0 0 128 128">
+											<g fill="#181616">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+													d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z">
+												</path>
+												<path
+													d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm-.743-.55M28.93 94.535c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zm-.575-.618M31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm0 0M34.573 101.373c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm0 0M39.073 103.324c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm0 0M44.016 103.685c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm0 0M48.614 102.903c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0">
+												</path>
+											</g>
+										</svg>
+										GitHub</span></a></p>
+							<p class="nav-item navbar-right"><a href="https://www.linkedin.com/in/alexandrebouhid"
+									target="_blank" rel="noopener noreferrer" class="nav-link"><span><i
+											class="devicon-linkedin-plain"></i>
+										LinkedIn</span></a></p>
+							<p class="nav-item navbar-right"><a href="https://angel.co/u/abouhid" target="_blank"
+									rel="noopener noreferrer" class="nav-link"><span>AngelList</span></a></p>
+
+
+						</div>
+					</div>
+				</div>
+				<p class=" m-3 ">
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					Copyright &copy;
+					<script>
+						document.write(new Date().getFullYear());
+					</script> All rights reserved | This template is made with <i class="icon-heart color-danger"
+						aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				</p>
+			</div>
+
+			<!-- <div class="row no-gutters block-9">
+          <div class="col-md-6 order-md-last d-flex">
+            <form action="#" class="bg-light p-4 p-md-5 contact-form">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Name">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Email">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Subject">
+              </div>
+              <div class="form-group">
+                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+              </div>
+            </form>
+          
+          </div>
+
+          <div class="col-md-6 d-flex">
+          	<div class="img" style="background-image: url(images/about.jpg);"></div>
+          </div>
+        </div> -->
 		</div>
-
-	</div>
-
-
-	<div class="copyrightSection">
-
-		<div class="col-md-12 text-center">
-			<h3> ‘Tell me and I forget. Teach me and I remember. Involve me and I learn.’ –Benjamin Franklin</h3>
-		</div>
-
-	</div>
+	</section>
 
 
+	<!-- <footer class="ftco-footer ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">About</h2>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Services</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Projects</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Services</h2>
+              <ul class="list-unstyled">
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Web Design</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Web Development</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Business Strategy</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Data Analysis</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Graphic Design</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center"> 
+
+       
+          </div>
+        </div>
+      </div>
+    </footer>-->
 
 
 
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
 
 
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/aos.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+	<script src="js/scrollax.min.js"></script>
 
-	<script src="countUp.js"></script>
-	<script src="countUp-jquery.js"></script>
-	<script src="jquery.superslides.min.js"></script>
-	<script src="jquery.easypiechart.min.js"></script>
-	<script src="owl.carousel.min.js"></script>
-	<script src="typed.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-	</script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-	</script>
-	<script type="text/javascript" src="https://unpkg.com/isotope-layout@3.0.5/dist/isotope.pkgd.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
-
-	<script src="script.js"></script>
+	<script src="js/main.js"></script>
 
 </body>
 
